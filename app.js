@@ -32,16 +32,37 @@ const playRound = (playerSelection, computerSelection) => {
   }
 };
 
-const game = () => {
-  // this is where we play the game
-  // this is where we get the player selection
-  const playerSelection = prompt('Please select rock, paper or scissors.');
-  // this is where we get the computer selection
-  const computerSelection = computerPlay();
-  // this is where we display the result
-  alert(playRound(playerSelection, computerSelection));
-};
+// const playerSelection = prompt('Rock, Paper, or Scissors?');
+// const computerSelection = computerPlay();
+// alert(playRound(playerSelection, computerSelection));
 
-const playerSelection = prompt('Rock, Paper, or Scissors?');
-const computerSelection = computerPlay();
-alert(playRound(playerSelection, computerSelection));
+// const game = () => {
+//   // this is where we play the game
+//   // this is where we get the player selection
+//   const playerSelection = prompt('Please select rock, paper or scissors.');
+//   // this is where we get the computer selection
+//   const computerSelection = computerPlay();
+//   // this is where we display the result
+//   alert(playRound(playerSelection, computerSelection));
+// };
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+// add rock event addEventListener
+rock.addEventListener('click', () => {
+  const playerSelection = 'rock';
+  const computerSelection = computerPlay();
+  alert(playRound(playerSelection, computerSelection));
+});
+paper.addEventListener('click', () => {
+  const playerSelection = 'paper';
+  const computerSelection = computerPlay();
+  alert(playRound(playerSelection, computerSelection));
+});
+scissors.addEventListener('click', () => {
+  const playerSelection = 'scissors';
+  const computerSelection = computerPlay();
+  alert(playRound(playerSelection, computerSelection));
+});
